@@ -29,4 +29,5 @@ module.exports = app => {
   router.get('/v1/privilege/ip_list', authenticate, controller.privilege.ipList);
   router.post('/v1/userlist', controller.user.userList);
   router.post('/v1/clublist', controller.user.clubList);
+  router.post('/v1/setclubfocuspermissions', controller.user.setClubFocusPermissions);
 };

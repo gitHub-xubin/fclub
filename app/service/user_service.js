@@ -29,6 +29,11 @@ class UserService extends Service {
 		data.count = count[0].count;
 		return data;
 	  }
+
+	  async setClubFocusPermissions(clubId,stauts){
+			await this.app.mysql.query('update `clubs` set focus_permissions = ? where club_id = ?',[stauts,clubId]);
+			return  true;
+	  }
 }
 
 module.exports = UserService;

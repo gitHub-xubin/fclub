@@ -22,6 +22,14 @@ class UserController extends Controller {
 			res		
 		);
 	  }
+
+	  async setClubFocusPermissions(){
+		const ctx = this.ctx;
+		const clubId = ctx.request.body.clubId;
+		const stauts = ctx.request.body.stauts;
+		await ctx.service.userService.setClubFocusPermissions(clubId,stauts);
+		ctx.success('success');
+	  }
 }
 
 module.exports = UserController;
