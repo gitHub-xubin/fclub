@@ -12,6 +12,16 @@ class UserController extends Controller {
 			res		
 		);
 	  }
+
+	  async clubList(){
+		const ctx = this.ctx;
+		const page = ctx.request.body.page;
+		const pageSize = ctx.request.body.pageSize;
+		const res = await ctx.service.userService.getclubList(page,pageSize);
+		ctx.success(		
+			res		
+		);
+	  }
 }
 
 module.exports = UserController;

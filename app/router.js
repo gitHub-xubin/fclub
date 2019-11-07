@@ -28,4 +28,5 @@ module.exports = app => {
   router.get('/v1/feed/search', authenticate, controller.feeds.search);
   router.get('/v1/privilege/ip_list', authenticate, controller.privilege.ipList);
   router.post('/v1/userlist', controller.user.userList);
+  router.post('/v1/clublist', controller.user.clubList);
 };
