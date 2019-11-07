@@ -1,0 +1,20 @@
+// UserService.proto
+syntax = "proto3";
+
+package com.fclubs.sofa.rpc;
+// option java_multiple_files = true; // 可选
+// option java_outer_classname = "ProtoServiceModels"; // 可选
+
+service FeedService {
+    rpc retryCrawling (CrawlingRequest) returns (CrawlingResponse) {
+    }
+}
+
+message CrawlingRequest {
+    string mid = 1;
+}
+
+message CrawlingResponse {
+    int32 resultCode = 1;
+    string message = 2;
+}
