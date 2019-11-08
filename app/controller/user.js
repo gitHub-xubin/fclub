@@ -26,8 +26,8 @@ class UserController extends Controller {
 	  async setClubFocusPermissions(){
 		const ctx = this.ctx;
 		const clubId = ctx.request.body.clubId;
-		const stauts = ctx.request.body.stauts;
-		await ctx.service.userService.setClubFocusPermissions(clubId,stauts);
+		const status = ctx.request.body.status;
+		await ctx.service.userService.setClubFocusPermissions(clubId,status);
 		ctx.success('success');
 	  }
 }
